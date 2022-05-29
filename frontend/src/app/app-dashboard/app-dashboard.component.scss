@@ -1,0 +1,22 @@
+$fullWidth : 100%;
+
+
+.carasoul-img {
+  width:$fullWidth; height: 30em;
+}
+
+.mat-card {
+  width: $fullWidth - 5;
+  height: $fullWidth - 5;
+}
+
+
+.mat-form-field {
+  width:$fullWidth;
+}
+
+.row {
+  margin-top: 4vh;
+}
+
+

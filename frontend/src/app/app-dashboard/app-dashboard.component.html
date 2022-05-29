@@ -1,0 +1,39 @@
+  <div class="row">
+  <ngb-carousel #carousel [interval]="2000" [pauseOnHover]="true" [pauseOnFocus]="true">
+    <ng-template ngbSlide *ngFor="let number of [0,1,2,3,4]">
+        <div class="picsum-img-wrapper">
+          <div class="carasoul-img"  style="background-color: #001214;"> </div>
+        </div>
+        <div class="carousel-caption">
+          <h1>Product Banner</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+
+<div class="row">
+  <mat-form-field>
+  <mat-label>Search Product</mat-label>
+  <span matPrefix>
+    <mat-icon matPrefix>search</mat-icon>
+  </span>
+  <input [(ngModel)]="searchText" matInput>
+</mat-form-field>
+</div>
+
+<div class="row">
+<mat-grid-list cols="3" rowHeight="140px">
+  <mat-grid-tile
+      *ngFor="let product of dataList | productSearchFilter: searchText">
+      <mat-card>
+        <mat-card-title>{{product.name}}</mat-card-title>
+        <mat-card-subtitle>{{product.price}} NOK.</mat-card-subtitle>
+        <mat-card-actions style="text-align: center;">
+          <button class="btn btn-secondary" (click)="addToCart(product.id)" mat-button>Add To Cart</button>
+        </mat-card-actions>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>

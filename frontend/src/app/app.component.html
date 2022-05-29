@@ -1,0 +1,25 @@
+<header>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav me-auto"></ul>
+        <div class="mx-auto order-0">
+          <a class="navbar-brand mx-auto h1" [routerLink]="['/']">Smart Hardware Shop</a>
+      </div>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+           <a [routerLink]="['/cart']"><mat-icon>add_shopping_cart</mat-icon></a>
+          </li>
+      </ul>
+</div>
+    </nav>
+  </header>
+
+<main>
+<router-outlet></router-outlet>
+</main>
+
+<footer class="footer py-3 bg-light">
+  <div class="container text-center">
+    <span class="text-muted">Smart Hardware Shop, All Rights Reserved.</span>
+  </div>
+</footer>

@@ -1,0 +1,18 @@
+<mat-list>
+  <div mat-subheader>Shopping Cart</div>
+  <mat-list-item *ngFor="let product of dataList">
+    <div mat-line>{{product.name}}</div>
+    <div mat-line> {{product.price}} </div>
+    <button (click)="removeFromCart(product)" mat-icon-button>
+      <mat-icon [ngStyle]="{'color':'red'}">delete</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+
+  <mat-list-item>
+    <div mat-line>Total</div>
+    <div id="total">{{total}} NOK</div>
+  </mat-list-item>
+
+</mat-list>
+
