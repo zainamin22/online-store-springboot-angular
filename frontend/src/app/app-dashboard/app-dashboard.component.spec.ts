@@ -47,7 +47,7 @@ describe('AppDashboardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('AppDashboardComponent is initialized', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -17,11 +17,11 @@ describe('ProductService', () => {
     service = TestBed.inject(ProductService);
   });
 
-  it('should be created', () => {
+  it('ProductService is created', () => {
     expect(service).toBeTruthy();
   });
 
-  it('getProducts should call GET', () => {
+  it('All product retrieved', () => {
     httpClientSpy.get.and.returnValue(
       of([new Product(TEST_PRODUCT_ID, 'testProduct', 500)])
     );

@@ -21,11 +21,11 @@ describe('CartService', () => {
     service = TestBed.inject(CartService);
   });
 
-  it('should be created', () => {
+  it('CartService is created', () => {
     expect(service).toBeTruthy();
   });
 
-  it('addToCart should call POST', () => {
+  it('Product added to cart', () => {
     httpClientSpy.post.and.returnValue(
       of({ status: 201, data: { productId: TEST_PRODUCT_ID } })
     );
@@ -35,14 +35,14 @@ describe('CartService', () => {
     });
   });
 
-  it('removeFromCart should call DELETE', () => {
+  it('Product removed from cart', () => {
     httpClientSpy.delete.and.returnValue(of({ status: 204, data: {} }));
     service.removeFromCart(TEST_PRODUCT_ID).subscribe((response) => {
       expect(response.status).toBe(204);
     });
   });
 
-  it('getCartProducts should call GET', () => {
+  it('All cart products retrieved', () => {
     httpClientSpy.get.and.returnValue(
       of([new Product(TEST_PRODUCT_ID, 'testProduct', 500)])
     );

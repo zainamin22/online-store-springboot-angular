@@ -40,7 +40,7 @@ describe('AppCartComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('AppCartComponent is initialized', () => {
     expect(component).toBeTruthy();
   });
 });
