@@ -35,5 +35,5 @@
     2. Run 'npm install'.  
     4. Run 'npm start'. Application will open up in a browser.
 
-- **Frontend Url:**
-  - Angular application will run on default Port(4200). So, Application can be accessed using: 'http://localhost:4200/'
+### Frontend Url
+Angular application will run on default Port(4200). So, application can be accessed using: 'http://localhost:4200/'
