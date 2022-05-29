@@ -37,3 +37,7 @@
 
 ### Frontend Url
 Angular application will run on default Port(4200). So, application can be accessed using: 'http://localhost:4200/'
+
+### Run Frontend Test Cases
+    1. Open command prompt and navigate to project folder 'frontend' i.e. 'cd <Project Folder>\online-store-springboot-angular\frontend'
+    2. Run the command: 'npm test'.  
