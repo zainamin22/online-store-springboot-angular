@@ -1,5 +1,8 @@
 # Online Store Springboot Microservices Angular
 
+## Architecture
+![Alt text](architecture.jpg?raw=true "Architecture")
+
 ## Softwares Pre-requisite
   - JDK (Java Development Kit) 1.8
   - Node.js (16.15.0) + NPM (8.5.5)
