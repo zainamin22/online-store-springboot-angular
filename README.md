@@ -33,7 +33,7 @@
   ### Run Angular Frontend
     1. Open command prompt and navigate to project folder 'frontend' i.e. 'cd <Project Folder>\online-store-springboot-angular\frontend'
     2. Run the command: 'npm install'.  
-    4. Run the command: 'npm start'. Application will open up in a browser.
+    3. Run the command: 'npm start'. Application will open up in a browser.
 
 ### Frontend Url
 Angular application will run on default Port(4200). So, application can be accessed using: 'http://localhost:4200/'
