@@ -10,6 +10,10 @@ $fullWidth : 100%;
   height: $fullWidth - 5;
 }
 
+.mat-card-actions {
+  text-align: end;
+}
+
 
 .mat-form-field {
   width:$fullWidth;

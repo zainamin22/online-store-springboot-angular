@@ -6,25 +6,30 @@ import { Cart } from '../model/cart';
 import { Product } from '../model/product';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
-  cartBasePath:string = environment.productApiUrl + 'cart-service/';
+  cartBasePath: string = environment.apiUrl + 'cart-service/';
 
   constructor(private httpClient: HttpClient) {}
 
-  addToCart (productId:number):Observable<any> {
-    console.log(this.cartBasePath+' '+productId);
-    return this.httpClient.post(this.cartBasePath+ 'cart/products', new Cart(productId),{responseType: 'json'});
+  addToCart(productId: number): Observable<any> {
+    return this.httpClient.post(
+      this.cartBasePath + 'cart/products',
+      new Cart(productId),
+      { responseType: 'json' }
+    );
   }
 
-  removeFromCart (productId:number):Observable<any> {
-    console.log(this.cartBasePath+' '+productId);
-    return this.httpClient.delete(this.cartBasePath+ 'cart/products/'+productId);
+  removeFromCart(productId: number): Observable<any> {
+    return this.httpClient.delete(
+      this.cartBasePath + 'cart/products/' + productId
+    );
   }
 
-  getCartProducts ():Observable<Product[]> {
-    return this.httpClient.get<Product[]>(this.cartBasePath+ 'cart/products' , {responseType: 'json'});
+  getCartProducts(): Observable<Product[]> {
+    return this.httpClient.get<Product[]>(this.cartBasePath + 'cart/products', {
+      responseType: 'json',
+    });
   }
-
 }

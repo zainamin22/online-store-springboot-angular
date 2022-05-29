@@ -5,14 +5,16 @@ import { environment } from 'src/environments/environment';
 import { Product } from '../model/product';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
-  productBasePath = environment.productApiUrl +'product-service/';
+  productBasePath = environment.apiUrl + 'product-service/';
 
   constructor(private httpClient: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>(this.productBasePath+ 'products', {responseType: 'json'});
+    return this.httpClient.get<Product[]>(this.productBasePath + 'products', {
+      responseType: 'json',
+    });
   }
 }

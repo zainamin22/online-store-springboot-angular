@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { AppDashboardComponent } from './app-dashboard/app-dashboard.component';
 import { AppCartComponent } from './app-cart/app-cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import {SearchFilterPipe} from './util/search-filter-pipe';
-import {MatListModule} from '@angular/material/list';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import { SearchFilterPipe } from './util/search-filter-pipe';
+import { MatListModule } from '@angular/material/list';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppDashboardComponent,
     AppCartComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +38,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     FormsModule,
     MatListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
